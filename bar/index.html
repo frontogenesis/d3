@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d3js - Udemy</title>
+</head>
+<body>
+
+  <div class="canvas"></div>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA0DEJIaMvRBbWITWN86zpdXsNb5AHy6fo",
+      authDomain: "udemy-d3-firebase-823a1.firebaseapp.com",
+      databaseURL: "https://udemy-d3-firebase-823a1.firebaseio.com",
+      projectId: "udemy-d3-firebase-823a1",
+      storageBucket: "udemy-d3-firebase-823a1.appspot.com",
+      messagingSenderId: "255581937204",
+      appId: "1:255581937204:web:1135cd6917ee1c5048b461",
+      measurementId: "G-ZKWCJE99PY"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore()
+    
+  </script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import Google Icon Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tree Diagram</title>
+</head>
+<body>
+
+  <div class="pink section">
+    <h2 class="white-text center">Nina Corp</h2>
+  </div>
+
+  <div class="grey lighten-3 section grey-text" style="position: relative;">
+    <p class="flow-text center">The number ONE Ninja Company</p>
+    <a href="#modal" class="btn-floating btn-large halfway-fab pink modal-trigger">
+      <i class="material-icons">add</i>
+    </a>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4 class="pink-text center">Add New Employee</h4>
+      <form>
+        <div class="input-field">
+          <input type="text" id="name" placeholder="Employee Name">
+        </div>
+        <div class="input-field">
+          <input type="text" id="parent" placeholder="Reports to...">
+        </div>
+        <div class="input-field">
+          <input type="text" id="department" placeholder="Department">
+        </div>
+        <div class="input-field">
+          <button class="btn pink white-text">Add Employee</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="canvas"></div>
+  </div>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyA0DEJIaMvRBbWITWN86zpdXsNb5AHy6fo",
+      authDomain: "udemy-d3-firebase-823a1.firebaseapp.com",
+      databaseURL: "https://udemy-d3-firebase-823a1.firebaseio.com",
+      projectId: "udemy-d3-firebase-823a1",
+      storageBucket: "udemy-d3-firebase-823a1.appspot.com",
+      messagingSenderId: "255581937204",
+      appId: "1:255581937204:web:6f65b155ecb19c4948b461",
+      measurementId: "G-Q35FF999VS"
+    }
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore()
+  </script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+  <script src="index.js"></script>
+  <script src="graph.js"></script>
+</body>
+</html>
